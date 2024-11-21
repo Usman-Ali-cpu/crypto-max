@@ -82,8 +82,8 @@ def trending_coins():
 
 
 if __name__ == '__main__':
-    scheduler.add_job(update_coins_predictions, 'cron',
-                      day_of_week='mon-sun', hour=00, minute=00)
+    # scheduler.add_job(update_coins_predictions, 'cron',
+    #                   day_of_week='mon-sun', hour=00, minute=00)
     scheduler.start()
     update_coins_predictions()
     app.run(debug=True)
